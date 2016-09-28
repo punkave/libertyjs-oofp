@@ -1,0 +1,36 @@
+{
+  "name": "libertyjs-oofp",
+  "version": "1.0.0",
+  "description": "Tom's Object Oriented Functional Programming examples for LibertyJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punkave/libertyjs-oofp.git"
+  },
+  "author": "Thomas Boutell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/punkave/libertyjs-oofp/issues"
+  },
+  "homepage": "https://github.com/punkave/libertyjs-oofp#readme",
+  "dependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-function-bind": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-es2016": "^6.11.3",
+    "babel-register": "^6.14.0",
+    "moog": "^0.2.4",
+    "request": "^2.75.0"
+  },
+  "babel": {
+    "presets": [
+      "es2016"
+    ],
+    "plugins": [
+      "transform-function-bind"
+    ]
+  }
+}
