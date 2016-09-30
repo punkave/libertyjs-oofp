@@ -3,6 +3,7 @@
 // run me with --expose-gc
 
 var now = require("performance-now");
+var dogsTotal = 100000;
 
 memory();
 bindTest();
@@ -30,7 +31,7 @@ function bindTest() {
   }
   var dogs = [];
   var i = 0;
-  while (i < 100000) {
+  while (i < dogsTotal) {
     dogs.push(new Dog(i));
     i++;
   }
@@ -38,7 +39,7 @@ function bindTest() {
   dogs[0].sniffFriends(dogs.slice(1));
   var end = now();
 
-  console.log('100000 sniffs time:');
+  console.log(dogsTotal + ' sniffs time:');
   console.log(end - start);
   console.log('Prevent overoptimization:');
   console.log(sniffs.length);
@@ -109,5 +110,6 @@ function selfTest() {
 
 function memory() {
   console.log('heap size: ' + process.memoryUsage().heapUsed);
+  console.log('bytes per dog: ' + (process.memoryUsage().heapUsed / dogsTotal));
   gc();
 }
