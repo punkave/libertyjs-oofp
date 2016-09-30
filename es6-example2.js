@@ -12,19 +12,12 @@ class Dog {
 }
 
 class Collie extends Dog {
-}
-
-// Override the "bark" method...
-//
-// WHAAAAT? ...
-//
-// It's all just syntactic sugar!
-
-Collie.prototype.bark = function() {
-  // Call "superclass" version
-  Dog.prototype.bark.call(this);
-  // Now extend it by doing more
-  console.log('Then she herded some sheep.');
+  bark() {
+    // Call "superclass" version
+    Dog.prototype.bark.call(this);
+    // Now extend it by doing more
+    console.log('Then she herded some sheep.');
+  }
 }
 
 var collie = new Collie("Jane");
