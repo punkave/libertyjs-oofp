@@ -1,4 +1,4 @@
-console.log('self pattern, example 1: a self-aware Dog in the world');
+console.log('self pattern, example 1: a self-aware Dog');
 
 function Dog(name) {
   var self = this;

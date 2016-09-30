@@ -1,6 +1,6 @@
 "use strict";
 
-console.log('ES6 classes, example one: just a Dog in the world');
+console.log('ES6 classes, example one: just a Dog');
 
 class Dog {
   constructor(name) {

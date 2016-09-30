@@ -1,4 +1,4 @@
-console.log('Prototypal inheritance, example one: just a Dog in the world');
+console.log('Prototypal inheritance, example one: just a Dog');
 
 function Dog(name) {
   this.name = name;
