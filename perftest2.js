@@ -1,10 +1,16 @@
 "use strict";
 
+// run me with --expose-gc
+
 var now = require("performance-now");
 
+memory();
 bindTest();
+memory();
 thatTest();
+memory();
 selfTest();
+memory();
 
 function bindTest() {
   console.log('arrow function / bind test');
@@ -39,7 +45,7 @@ function bindTest() {
 }
 
 function thatTest() {
-  console.log('\n\narrow function / bind test');
+  console.log('\n\n"that" pattern test');
   var sniffs = '';
   class Dog {
     constructor(name) {
@@ -99,4 +105,9 @@ function selfTest() {
   console.log(end - start);
   console.log('Prevent overoptimization:');
   console.log(sniffs.length);
+}
+
+function memory() {
+  console.log('heap size: ' + process.memoryUsage().heapUsed);
+  gc();
 }
