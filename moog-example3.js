@@ -19,7 +19,7 @@ synth.define('lazy-dog', {
   construct: function(self, options) {
     self.wake = function() {
       console.log(self.name + ' slept all day.');
-    }
+    };
   }
 });
 
