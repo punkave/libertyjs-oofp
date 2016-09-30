@@ -1,17 +1,16 @@
-console.log('Self pattern, example 3b: simple forEach win!');
+console.log('Self pattern, example 3b: REALLY simple forEach win!');
 
 function Dog(name) {
   var self = this;
   self.name = name;
 
   self.sniff = function(dog) {
-    console.log(this.name + ' sniffed ' + dog.name + '.');
+    console.log(self.name + ' sniffed ' + dog.name + '.');
   };
 
   self.sniffFriends = function(friends) {
-    friends.forEach(function(dog) {
-      self.sniff(dog);
-    });
+    // WHOA DUDE
+    friends.forEach(self.sniff);
   };
 }
 
